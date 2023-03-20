@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-extension">
-                <div class="card-header card-header-extension">{{ __('Login') }}</div>
+                <div class="card-header card-header-extension">{{ __('LOGIN') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -29,7 +29,7 @@
 
                             <div class="col-md-7">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
+                                <img src='{{asset("images\cloud1.eps")}}'>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
