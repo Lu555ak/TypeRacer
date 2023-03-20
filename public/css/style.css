@@ -50,6 +50,22 @@ button[type="submit"]:hover {
     overflow: hidden;
 }
 
+#bar-buddy {
+    width: 8%;
+    margin-bottom: 50px;
+    position: absolute;
+    top: -20;
+    left: -20;
+}
+
+.bar-buddy-box{
+    position: relative;
+}
+
 label[for="name"], label[for="email"], label[for="password"], label[for="password-confirm"]{
     font-weight: bolder;
+}
+
+#type-text{
+    text-align: center;
 }

@@ -2,21 +2,27 @@
 <script src="{{ asset('js/game.js')}}"></script>
 
 @section('content')
-<div class="container">
+<div class="container" on>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="bar-buddy-box card">
                 <div id="bar"></div>
-            </div>
+                <img id="bar-buddy" src='{{asset("images\corgi.png")}}'>
+            </div>    
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div id="type-text">Start typing to start the game... <div>       
         </div>
     </div>
     <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div>Type this!</div>
-                <input type="text" onkeypress="keyPressed()">
-                
+                <input id="type-input" value="" type="text" onkeyup="keyPressed()">        
             </div>
         </div>
     </div>
