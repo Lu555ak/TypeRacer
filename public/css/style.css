@@ -28,9 +28,23 @@ button[type="submit"] {
     color: black;
     font-weight: bold;
 }
+
 button[type="submit"]:hover {
     border: 0.30vh solid black;
     background-color: whitesmoke;
     color: #87CEEB;
     font-weight: bold;
+}
+
+#bar {
+    width: 0%;
+    height: 30px;
+    background-color: #4eb8fa;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
+    margin: 3px;
+    margin-right: 7px;
+    overflow: hidden;
 }
