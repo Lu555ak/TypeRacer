@@ -1,3 +1,36 @@
-.red {
-    color: red;
+.background-color{
+    background-color: #87CEFA;
+}
+
+.navbar-extension{
+    border: 0.30vh solid black;
+}
+
+.card-extension{
+    margin-top: 25%;
+    margin-left: 10%;
+    width: 75vh;
+    border: 0.30vh solid black;
+}
+
+.card-header-extension{
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type="email"], input[type="password"], input[type="checkbox"], input[type="text"] { 
+    border: 0.30vh solid black;
+}
+
+button[type="submit"] {
+    border: 0.30vh solid black;
+    background-color:#87CEFA;
+    color: black;
+    font-weight: bold;
+}
+button[type="submit"]:hover {
+    border: 0.30vh solid black;
+    background-color: whitesmoke;
+    color: #87CEEB;
+    font-weight: bold;
 }
