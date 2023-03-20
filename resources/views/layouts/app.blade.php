@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
-<body class="background-color">
+<body scroll="no" class="background-color">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -29,7 +29,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
@@ -85,5 +85,27 @@
             @yield('content')
         </main>
     </div>
+    <div id="cloud1">
+        <img src='{{asset("images\cloud1.png")}}'>
+    </div>
+    <div id="cloud2">
+            <img src='{{asset("images\cloud2.png")}}'>
+    </div>
+    <div id="cloud3">
+            <img src='{{asset("images\cloud3.png")}}'>
+    </div>
+    <div id="cloud4">
+            <img src='{{asset("images\cloud4.png")}}'>
+    </div>
+    <div id="cloud5">
+            <img src='{{asset("images\cloud5.png")}}'>
+    </div>
+    <div id="cloud6">
+            <img src='{{asset("images\cloud6.png")}}'>
+    </div>
+    <div id="cloud7">
+            <img src='{{asset("images\cloud7.png")}}'>
+    </div>
+    
 </body>
 </html>
