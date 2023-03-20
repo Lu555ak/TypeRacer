@@ -11,11 +11,12 @@
     margin-left: 10%;
     width: 75vh;
     border: 0.30vh solid black;
+    box-shadow: 1vh 1vh;
 }
 
 .card-header-extension{
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 input[type="email"], input[type="password"], input[type="checkbox"], input[type="text"] { 
@@ -33,4 +34,8 @@ button[type="submit"]:hover {
     background-color: whitesmoke;
     color: #87CEEB;
     font-weight: bold;
+}
+
+label[for="name"], label[for="email"], label[for="password"], label[for="password-confirm"]{
+    font-weight: bolder;
 }
