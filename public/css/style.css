@@ -1,3 +1,8 @@
+body{
+    position: relative;
+    overflow: hidden
+}
+
 .background-color{
     background-color: #87CEFA;
 }
@@ -52,4 +57,117 @@ button[type="submit"]:hover {
 
 label[for="name"], label[for="email"], label[for="password"], label[for="password-confirm"]{
     font-weight: bolder;
+}
+
+div[id="cloud1"] {
+    position: absolute;
+    animation-name: moving-cloud;
+    animation-duration: 21s;
+    animation-iteration-count: infinite;
+    top: 22vh;
+    z-index: -100;
+}
+
+@keyframes moving-cloud {
+    0%{left: 0vh; opacity: 0;}
+    50%{left: 41.5vh; opacity: 1;}
+    100%{left: 83vh; opacity: 0;}
+}
+
+div[id="cloud2"] {
+    position: absolute;
+    animation-name: moving-cloud2;
+    animation-duration: 17s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: -1.5vh;
+    z-index: -100;
+}
+
+@keyframes moving-cloud2 {
+    0%{right: 21vh; opacity: 0;}
+    50%{right: 84.5vh; opacity: 1;}
+    100%{right: 148vh; opacity: 0;}
+}
+
+div[id="cloud3"] {
+    position: absolute;
+    animation-name: moving-cloud3;
+    animation-duration: 15s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: 45vh;
+    z-index: -100;
+}
+
+@keyframes moving-cloud3 {
+    0%{left: 64vh; opacity: 0;}
+    50%{left: 92vh; opacity: 1;}
+    100%{left: 120vh; opacity: 0;}
+}
+
+div[id="cloud4"] {
+    position: absolute;
+    animation-name: moving-cloud4;
+    animation-duration: 19.5s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: 62vh;
+    z-index: -101;
+}
+
+@keyframes moving-cloud4 {
+    0%{right: 12vh; opacity: 0;}
+    25%{right: 12vh; opacity: 0;}
+    50%{right: 77vh; opacity: 1;}
+    100%{right: 142vh; opacity: 0;}
+}
+
+div[id="cloud5"] {
+    position: absolute;
+    animation-name: moving-cloud5;
+    animation-duration: 14.2s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: 72vh;
+    z-index: -102;
+}
+
+@keyframes moving-cloud5 {
+    0%{left: 3vh; opacity: 0;}
+    50%{left: 32.5vh; opacity: 1;}
+    100%{left: 62vh; opacity: 0;}
+}
+
+div[id="cloud6"] {
+    position: absolute;
+    animation-name: moving-cloud6;
+    animation-duration: 22s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: 83vh;
+    z-index: -101;
+}
+
+@keyframes moving-cloud6 {
+    0%{right: 3vh; opacity: 0;}
+    50%{right: 42.5vh; opacity: 1;}
+    100%{right: 72vh; opacity: 0;}
+}
+
+div[id="cloud7"] {
+    position: absolute;
+    animation-name: moving-cloud7;
+    animation-duration: 23s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: 42vh;
+    z-index: -102;
+}
+
+@keyframes moving-cloud7 {
+    0%{right: 3vh; opacity: 0;}
+    35%{right: 3vh; opacity: 0;}
+    66%{right: 51.5vh; opacity: 1;}
+    100%{right: 100vh; opacity: 0;}
 }
