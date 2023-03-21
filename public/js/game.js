@@ -57,6 +57,7 @@ var gameInProgress = false;
 var text = new GameText(document.getElementById("t").innerHTML);
 var words = 0;
 var seconds = 0;
+var wpmnum;
 
 
 function startGame(){
@@ -69,9 +70,10 @@ function startGame(){
         typeInput.value = null;
         typeInput.maxLength = text.getTextLength();
         gameInProgress = true;
-        barBuddy.src = "http://127.0.0.1:8000/" + getCookie("buddy");
+        barBuddy.src = "http://127.0.0.1:8000/images/buddy" + getCookie("buddy") + ".png";
         startTimer();
         console.log(barBuddy.src);
+        console.log( getCookie("buddy"));
     }
 }
 
@@ -85,7 +87,7 @@ function setProgressBar(percentage){
     bar.style.width = percentage + "%";
     bar.innerHTML = percentage  + "%";
     
-    var barBuddyPercentage = ((percentage / 100) * 830) - 20;
+    var barBuddyPercentage = ((percentage / 100) * 830) - 30;
     barBuddy.style.left = barBuddyPercentage;
 }
 
@@ -107,7 +109,8 @@ function startTimer(){
         if(gameInProgress == true)
             seconds += 1;
         timer.innerText = seconds + " sec";
-        wpm.innerText = Math.round(words / (seconds/60)) + " WPM";
+        wpmnum = Math.round(words / (seconds/60))
+        wpm.innerText = wpmnum + " WPM";
     }
 
     var cancel = setInterval(incrementSeconds, 1000);
@@ -154,6 +157,8 @@ function checkGame(){
     if(typeof mistakeIndex === 'undefined' || mistakeIndex.length == 0 && text.getTextLength() == inputLength){
         typeInput.disabled = true;  
         gameInProgress = false;
+
+        setCookie("wpm", wpmnum , 10);
         
         setInterval(() => {window.location.href = "/";}, 3000);
     }
@@ -162,16 +167,24 @@ function checkGame(){
 
 
 function getCookie(cname) {
-    let name = cname + "=";
-    let ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+    var name = cname + "="; //Create the cookie name variable with cookie name concatenate with = sign
+    var cArr = window.document.cookie.split(';'); //Create cookie array by split the cookie by ';'
+     
+    //Loop through the cookies and return the cooki value if it find the cookie name
+    for(var i=0; i<cArr.length; i++) {
+        var c = cArr[i].trim();
+        //If the name is the cookie string at position 0, we found the cookie and return the cookie value
+        if (c.indexOf(name) == 0) 
+            return c.substring(name.length, c.length);
     }
+     
+    //If we get to this point, that means the cookie wasn't find in the look, we return an empty string.
     return "";
+}
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date(); //Create an date object
+    d.setTime(d.getTime() + (exdays*1000*60*60*24)); //Set the time to exdays from the current date in milliseconds. 1000 milliseonds = 1 second
+    var expires = "expires=" + d.toGMTString(); //Compose the expirartion date
+    window.document.cookie = cname+"="+cvalue+"; "+expires;//Set the cookie with value and the expiration date
 }

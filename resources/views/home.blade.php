@@ -7,19 +7,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-extension2">
-                <div class="card-header card-header-extension">The Best Score</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                <div class="card-header card-header-extension">Last WPM</div>
+                <div id="wpmtext" class="card-body">
+                    
                 </div>
             </div>
         </div>
     </div>
-    <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-extension2">

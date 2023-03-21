@@ -13,7 +13,7 @@
                     <div class="col-md-8">
                         <div class="bar-buddy-box card">
                             <div id="bar"></div>
-                            <img id="bar-buddy" src='{{asset("images\corgi.png")}}'>
+                            <img id="bar-buddy">
                         </div>    
                     </div>
                 </div>
