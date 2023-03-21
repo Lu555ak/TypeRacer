@@ -22,9 +22,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <input id="type-input" value="" type="text" onkeyup="keyPressed()">        
+                <!-- <input id="type-input" value="" type="text" onkeyup="keyPressed()"> -->
+                <textarea id="type-input" value="" type="text" onkeyup="keyPressed()" cols="30" rows="5"></textarea>        
             </div>
         </div>
     </div>
 </div>
+
+
 @endsection
