@@ -21,10 +21,10 @@
 </head>
 <body scroll="no" class="background-color">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navbar-extension">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand link-text-main" href="{{ url('/') }}">
+                    TypeRacer
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
                         @auth
                             @if (Route::has('lobby'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('lobby') }}">{{ __('Lobby') }}</a>
+                                    <a class="nav-link link-text" href="{{ route('lobby') }}">{{ __('Lobby') }}</a>
                                 </li>
                             @endif
                         @endauth
@@ -48,13 +48,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link link-text" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link link-text" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -105,6 +105,9 @@
     </div>
     <div id="cloud7">
             <img src='{{asset("images\cloud7.png")}}'>
+    </div>
+    <div id="cloud8">
+            <img src='{{asset("images\cloud5.png")}}'>
     </div>
     
 </body>

@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card card-extension">
+                <div class="card-header card-header-extension">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -22,10 +22,30 @@
     <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Companions</div>
+            <div class="card card-extension2">
+                <div class="card-header card-header-extension">Companions</div>
                 <div class="card-body">
-                
+                    <div class="row">
+                        <div class="card card-extension2">
+                            <div class="card-header card-header-extension">Pig</div>
+                            <div class="card-body">
+                                <img for="barbuddy" src='{{asset("images\buddy1.png")}}'>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div for="barbuddy" class="col-2"><a for="barbuddy" href=""><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></a></div>
+                        <div for="barbuddy" class="col-2"><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></div>
+                        <div for="barbuddy" class="col-2"><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></div>
+                        <div for="barbuddy" class="col-2"><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></div>
+                    </div>
+                    <div class="row">
+                        <div for="barbuddy" class="col-2"><a for="barbuddy" href=""><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></a></div>
+                        <div for="barbuddy" class="col-2"><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></div>
+                        <div for="barbuddy" class="col-2"><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></div>
+                        <div for="barbuddy" class="col-2"><img for="barbuddy" src='{{asset("images\buddy1.png")}}'></div>
+                    </div>
                 </div>
             </div>
         </div>

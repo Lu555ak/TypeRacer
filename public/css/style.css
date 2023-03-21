@@ -8,7 +8,7 @@ body{
 }
 
 .navbar-extension{
-    border: 0.30vh solid black;
+    border-bottom: 0.5vh solid black;
 }
 
 .card-extension{
@@ -19,9 +19,35 @@ body{
     box-shadow: 1vh 1vh;
 }
 
+.card-extension2{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 75vh;
+    border: 0.30vh solid black;
+    box-shadow: 1vh 1vh;
+}
+
+.card-extension3{
+    width: 12vh;
+    height: 12vh;
+    border: 0.30vh solid black;
+    box-shadow: 0.2vh 0.2vh;
+}
+
 .card-header-extension{
     text-align: center;
     font-weight: bolder;
+    border-bottom: 0.30vh solid black;
+    background-color: #a8d9f7;
+}
+
+
+.card-body-extension{
+    margin-top: 25%;
+    margin-left: 10%;
+    width: 75vh;
+    border: 0.30vh solid black;
+    box-shadow: 1vh 1vh;
 }
 
 input[type="email"], input[type="password"], input[type="checkbox"], input[type="text"] { 
@@ -186,4 +212,58 @@ div[id="cloud7"] {
     35%{right: 3vh; opacity: 0;}
     66%{right: 51.5vh; opacity: 1;}
     100%{right: 100vh; opacity: 0;}
+}
+
+div[id="cloud8"] {
+    position: absolute;
+    animation-name: moving-cloud8;
+    animation-duration: 16s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+    top: 15vh;
+    z-index: -102;
+}
+
+@keyframes moving-cloud8 {
+    0%{right: 24vh; opacity: 0;}
+    35%{right: 24vh; opacity: 0;}
+    66%{right: 42.5vh; opacity: 1;}
+    100%{right: 61vh; opacity: 0;}
+}
+
+.link-text-main:link, .link-text-main:visited {
+    color: #78c7f9;
+    font-weight: bold;
+    text-shadow: 0.2vh 0vh black, -0.2vh 0vh black, 0vh 0.2vh black, 0vh -0.2vh black, 0.2vh 0.2vh black, -0.2vh -0.2vh black;
+    font-size: 3vh;
+    text-decoration: none;
+    transition: ease-in 0.2s;
+}
+  
+.link-text-main:hover, .link-text-main:active {
+    color: #fafafa;
+    text-shadow: 0.22vh 0vh #4eb8fa, -0.22vh 0vh #4eb8fa, 0vh 0.22vh #4eb8fa, 0vh -0.22vh #4eb8fa, 0.22vh 0.22vh #4eb8fa, -0.22vh -0.22vh #4eb8fa;
+    font-size: 3.1vh;
+    transition: ease-in 0.2s;
+}
+
+.link-text:link, .link-text:visited {
+    color: #78c7f9;
+    font-weight: bold;
+    text-shadow: 0.15vh 0vh black, -0.15vh 0vh black, 0vh 0.15vh black, 0vh -0.15vh black, 0.15vh 0.15vh black, -0.15vh -0.15vh black;
+    font-size: 2vh;
+    text-decoration: none;
+    transition: ease-in 0.2s;
+}
+  
+.link-text:hover, .link-text:active {
+    color: #fafafa;
+    text-shadow: 0.151vh 0vh #4eb8fa, -0.151vh 0vh #4eb8fa, 0vh 0.151vh #4eb8fa, 0vh -0.151vh #4eb8fa, 0.151vh 0.151vh #4eb8fa, -0.151vh -0.151vh #4eb8fa;
+    font-size: 2.1vh;
+    transition: ease-in 0.2s;
+}
+
+img[for="barbuddy"] {
+    width: 95%;
+    height: 95%;
 }
