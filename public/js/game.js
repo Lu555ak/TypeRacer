@@ -62,13 +62,16 @@ var seconds = 0;
 function startGame(){
     if(gameInProgress == false){
         let typeInput = document.getElementById("type-input");
+        let barBuddy = document.getElementById("bar-buddy");
         let typeText = document.getElementById("type-text");
 
         typeText.innerHTML = text.getText();
         typeInput.value = null;
         typeInput.maxLength = text.getTextLength();
         gameInProgress = true;
+        barBuddy.src = "http://127.0.0.1:8000/" + getCookie("buddy");
         startTimer();
+        console.log(barBuddy.src);
     }
 }
 
@@ -154,4 +157,21 @@ function checkGame(){
         
         setInterval(() => {window.location.href = "/";}, 3000);
     }
+}
+
+
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
 }

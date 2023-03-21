@@ -34,6 +34,15 @@ body{
     height: 12vh;
     border: 0.30vh solid black;
     box-shadow: 0.33vh 0.33vh;
+    transition: 0.3s;
+}
+
+.card-extension3:hover{
+    border: 0.6vh solid black;
+}
+
+.card-selected{
+    border: 0.6vh solid black;
 }
 
 .card-header-extension{

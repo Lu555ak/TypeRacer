@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('texts', function (Blueprint $table) {
             $table->id();
             $table->string('content');
-            $table->smallInteger('difficulty'); //1, 2, 3
+            $table->string('difficulty');
+            $table->string('length');
             $table->timestamps();
         });
     }

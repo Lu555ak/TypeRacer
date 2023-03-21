@@ -13,16 +13,16 @@
                     @csrf
                         <label class="col-md-3 col-form-label">Difficulty: </label>
                         <select name="difficulty" class="form-select" aria-label="Difficulty">
-                            <option value="Easy" selected>Easy</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Hard">Hard</option>
+                            <option value="easy" selected>Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
                         </select>
                         <br>
                         <label class="col-md-3 col-form-label">Length: </label>
                         <select name="length"  class="form-select" aria-label="Length">
-                            <option value="Short" selected>Short</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Long">Long</option>
+                            <option value="short" selected>Short</option>
+                            <option value="medium">Medium</option>
+                            <option value="long">Long</option>
                         </select>
                         <br>
                         <button type="submit" class="btn btn-primary">

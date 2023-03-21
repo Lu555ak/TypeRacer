@@ -36,7 +36,7 @@
                         @auth
                             @if (Route::has('lobby'))
                                 <li class="nav-item">
-                                    <a class="nav-link link-text" href="{{ route('lobby') }}">{{ __('Lobby') }}</a>
+                                    <a class="nav-link link-text" href="{{ route('lobby') }}">{{ __('Play') }}</a>
                                 </li>
                             @endif
                         @endauth
