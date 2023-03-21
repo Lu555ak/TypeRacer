@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<div id="t" style="display: none;">{{$text}}</div>
 <script src="{{ asset('js/game.js')}}"></script>
 
 @section('content')
@@ -28,6 +29,4 @@
         </div>
     </div>
 </div>
-
-
 @endsection

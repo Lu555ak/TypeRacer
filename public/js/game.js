@@ -51,13 +51,12 @@ class GameText {
 
 
 var i = 0;
-var t = "A set of words that is complete in itself, typically containing a subject and predicate, conveying a statement, question, exclamation, or command, and consisting of a main clause and sometimes one or more subordinate clauses.";
+//var t = "A set of words that is complete in itself, typically containing a subject and predicate, conveying a statement, question, exclamation, or command, and consisting of a main clause and sometimes one or more subordinate clauses.";
 var gameInProgress = false;
 
 
-var text = new GameText(t);
+var text = new GameText(document.getElementById("t").innerHTML);
 var words = 0;
-
 
 
 function startGame(){
@@ -131,4 +130,11 @@ function checkGame(){
     else
         typeInput.maxLength = text.getTextLength();
 
+    // Win check
+    if(typeof mistakeIndex === 'undefined' || mistakeIndex.length == 0 && text.getTextLength() == inputLength){
+        typeInput.disabled = true;       
+    }
+
+    console.log(text.getTextLength());
+    console.log(inputLength);
 }

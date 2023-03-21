@@ -22,4 +22,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/lobby', [App\Http\Controllers\LobbyController::class, 'openLobby'])->name('lobby')->middleware('auth');
 
-Route::get('/game', [App\Http\Controllers\GameController::class, 'startGame'])->name('game')->middleware('auth');
+Route::post('/game', [App\Http\Controllers\GameController::class, 'startGame'])->name('game')->middleware('auth');
