@@ -51,12 +51,12 @@ class GameText {
 
 
 var i = 0;
-//var t = "A set of words that is complete in itself, typically containing a subject and predicate, conveying a statement, question, exclamation, or command, and consisting of a main clause and sometimes one or more subordinate clauses.";
 var gameInProgress = false;
 
 
 var text = new GameText(document.getElementById("t").innerHTML);
 var words = 0;
+var seconds = 0;
 
 
 function startGame(){
@@ -68,6 +68,7 @@ function startGame(){
         typeInput.value = null;
         typeInput.maxLength = text.getTextLength();
         gameInProgress = true;
+        startTimer();
     }
 }
 
@@ -94,6 +95,22 @@ function keyPressed(){
 function countWords(str) {
     return str.trim().split(/\s+/).length;
 }
+
+function startTimer(){
+    var timer = document.getElementById('timer');
+    var wpm = document.getElementById('wpm');
+
+    function incrementSeconds() {
+        if(gameInProgress == true)
+            seconds += 1;
+        timer.innerText = seconds + " sec";
+        wpm.innerText = Math.round(words / (seconds/60)) + " WPM";
+    }
+
+    var cancel = setInterval(incrementSeconds, 1000);
+}
+
+
 
 
 function checkGame(){
@@ -132,9 +149,9 @@ function checkGame(){
 
     // Win check
     if(typeof mistakeIndex === 'undefined' || mistakeIndex.length == 0 && text.getTextLength() == inputLength){
-        typeInput.disabled = true;       
+        typeInput.disabled = true;  
+        gameInProgress = false;
+        
+        setInterval(() => {window.location.href = "/";}, 3000);
     }
-
-    console.log(text.getTextLength());
-    console.log(inputLength);
 }

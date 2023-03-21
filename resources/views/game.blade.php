@@ -28,5 +28,7 @@
             </div>
         </div>
     </div>
+    <div id='timer'> </div>
+    <div id='wpm'> </div>
 </div>
 @endsection
