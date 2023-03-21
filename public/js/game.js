@@ -135,10 +135,10 @@ function checkGame(){
     text.clearColorLetter();
     for(i=0; i<inputLength; i++){
         if(input[i] == text.getLetter(i)){
-            text.setColorLetter(i, "green");
+            text.setColorLetter(i, "#4eb8fa");
         }
         else{
-            text.setColorLetter(i, "red");
+            text.setColorLetter(i, "#e86872");
             mistakeIndex.push(i);
         }
     }
