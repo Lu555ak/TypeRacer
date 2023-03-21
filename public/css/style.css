@@ -36,6 +36,27 @@ body{
     box-shadow: 0.33vh 0.33vh;
 }
 
+.card-extension4{
+    width: 60vh;
+    height: 12vh;
+    border: 0.30vh solid black;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    box-shadow: 0.33vh 0.33vh;
+}
+
+.card-extension5{
+    margin-top: 10%;
+    width: 25vh;
+    border: 0.30vh solid black;
+    box-shadow: 1vh 1vh;
+}
+
+.card-extension6{
+    border: 0.30vh solid black;
+    box-shadow: 1vh 1vh;
+}
+
 .card-header-extension{
     text-align: center;
     font-weight: bolder;
@@ -100,15 +121,14 @@ button[type="submit"]:hover {
 }
 
 .bar-buddy-box{
+    margin-top: 10%;
+    margin-bottom: 3%;
     position: relative;
+    box-shadow: 1vh 1vh black, -1vh -1vh black, 1vh -1vh black, -1vh 1vh black;
 }
 
 label[for="name"], label[for="email"], label[for="password"], label[for="password-confirm"]{
     font-weight: bolder;
-}
-
-#type-text{
-    text-align: center;
 }
 
 div[id="cloud1"] {
@@ -276,4 +296,13 @@ div[id="cloud8"] {
 img[for="barbuddy"] {
     width: 100%;
     height: 100%;
+}
+
+div[id="type-text"] {
+    background-color: #fafafa;
+    border: 0.30vh solid black;
+    box-shadow: 1vh 1vh;
+    width: 88vh;
+    text-align: center;
+    font-size: 1.5vh;
 }
