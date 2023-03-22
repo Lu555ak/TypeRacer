@@ -59,6 +59,14 @@ var words = 0;
 var seconds = 0;
 var wpmnum;
 
+function test(){
+    let bb = document.getElementById("bar-buddy");
+    bb.src += getCookie("buddy") + ".png";
+    console.log("aaaa");
+
+}
+setTimeout(test, 1);
+
 
 function startGame(){
     if(gameInProgress == false){
@@ -70,7 +78,6 @@ function startGame(){
         typeInput.value = null;
         typeInput.maxLength = text.getTextLength();
         gameInProgress = true;
-        barBuddy.src = "http://127.0.0.1:8000/images/buddy" + getCookie("buddy") + ".png";
         startTimer();
         console.log(barBuddy.src);
         console.log( getCookie("buddy"));
@@ -87,7 +94,7 @@ function setProgressBar(percentage){
     bar.style.width = percentage + "%";
     bar.innerHTML = percentage  + "%";
     
-    var barBuddyPercentage = ((percentage / 100) * 830) - 30;
+    var barBuddyPercentage = ((percentage / 100) * 830) - 40;
     barBuddy.style.left = barBuddyPercentage;
 }
 

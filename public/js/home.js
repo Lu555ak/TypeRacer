@@ -6,11 +6,17 @@ function selectBuddy(index){
 
     setCookie("buddy", index, 10);
     console.log( getCookie("buddy"));
-
-    var aa = document.getElementById("wpmtext");
-    aa.innerHTML = getCookie("wpm") + "WPM";
-
 }
+
+function test2(){
+    var aa = document.getElementById("wpmtext");
+    if(getCookie("wpm") != "undefined" && getCookie("wpm") > 0)
+        aa.innerHTML = getCookie("wpm") + "WPM";
+    else
+        aa.innerHTML = "Play to find out!";
+}
+
+setTimeout(test2, 10);
 
 function clearSelectedBuddies(){
     for(i=1; i<=12; i++){
